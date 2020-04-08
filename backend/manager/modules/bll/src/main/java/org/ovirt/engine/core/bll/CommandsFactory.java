@@ -33,6 +33,7 @@ public final class CommandsFactory {
     private static final String[] COMMAND_PACKAGES = new String[] {
             "org.ovirt.engine.core.bll",
             "org.ovirt.engine.core.bll.aaa",
+            "org.ovirt.engine.core.bll.example",
             "org.ovirt.engine.core.bll.exportimport",
             "org.ovirt.engine.core.bll.gluster",
             "org.ovirt.engine.core.bll.hostdeploy",

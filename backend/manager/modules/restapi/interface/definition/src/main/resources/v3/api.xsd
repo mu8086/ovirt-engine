@@ -3663,6 +3663,35 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:element name="luke_example" type="LukeExample" />
+  <xs:element name="luke_examples" type="LukeExamples" />
+
+  <xs:complexType name="LukeExample">
+    <xs:complexContent>
+      <xs:extension base="BaseResource">
+        <xs:sequence>
+          <xs:element name="status" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="LukeExamples">
+    <xs:complexContent>
+      <xs:extension base="BaseResources">
+        <xs:sequence>
+          <xs:element ref="luke_example" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property name="LukeExamples"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
   <xs:element name="reported_devices" type="ReportedDevices"/>
 
   <xs:complexType name="ReportedDevices">

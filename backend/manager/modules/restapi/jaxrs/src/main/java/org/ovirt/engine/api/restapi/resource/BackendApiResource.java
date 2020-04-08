@@ -58,6 +58,7 @@ import org.ovirt.engine.api.resource.IconsResource;
 import org.ovirt.engine.api.resource.ImageTransfersResource;
 import org.ovirt.engine.api.resource.InstanceTypesResource;
 import org.ovirt.engine.api.resource.JobsResource;
+import org.ovirt.engine.api.resource.LukeExamplesResource;
 import org.ovirt.engine.api.resource.MacPoolsResource;
 import org.ovirt.engine.api.resource.NetworkFiltersResource;
 import org.ovirt.engine.api.resource.NetworksResource;
@@ -536,6 +537,11 @@ public class BackendApiResource
     @Override
     public IconsResource getIconsResource() {
         return inject(new BackendIconsResource());
+    }
+
+    @Override
+    public LukeExamplesResource getLukeExamplesResource() {
+        return inject(new BackendLukeExamplesResource());
     }
 
     @Override

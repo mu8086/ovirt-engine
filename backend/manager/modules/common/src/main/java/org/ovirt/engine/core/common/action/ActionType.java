@@ -609,7 +609,11 @@ public enum ActionType {
     RunAsyncAction(7000, QuotaDependency.NONE),
 
     // API:
-    AddDeprecatedApiEvent(8000, false, QuotaDependency.NONE);
+    AddDeprecatedApiEvent(8000, false, QuotaDependency.NONE),
+
+    AddLukeInstance(9001, ActionGroup.EDIT_CLUSTER_CONFIGURATION, false, QuotaDependency.NONE),
+    UpdateLukeInstance(9002, ActionGroup.EDIT_CLUSTER_CONFIGURATION, false, QuotaDependency.NONE),
+    RemoveLukeInstance(9003, ActionGroup.EDIT_CLUSTER_CONFIGURATION, false, QuotaDependency.NONE);
 
     private int intValue;
     private ActionGroup actionGroup;

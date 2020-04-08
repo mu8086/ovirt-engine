@@ -39,7 +39,8 @@ public enum VdcObjectType {
     VnicProfile(27, "Vnic Profile"),
     MacPool(28, "MAC Pool"),
     DiskProfile(29, "Disk Profile"),
-    CpuProfile(30, "Cpu Profile");
+    CpuProfile(30, "Cpu Profile"),
+    Example(99, "Luke Example");
 
 
     private int value;

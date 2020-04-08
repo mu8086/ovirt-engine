@@ -161,7 +161,11 @@ public enum ActionGroup {
     DELETE_CPU_PROFILE(1665, RoleType.ADMIN, true, ApplicationMode.VirtOnly),
     UPDATE_CPU_PROFILE(1666, RoleType.ADMIN, true, ApplicationMode.VirtOnly),
     CREATE_CPU_PROFILE(1667, RoleType.ADMIN, true, ApplicationMode.VirtOnly),
-    ASSIGN_CPU_PROFILE(1668, RoleType.ADMIN, true, ApplicationMode.VirtOnly);
+    ASSIGN_CPU_PROFILE(1668, RoleType.ADMIN, true, ApplicationMode.VirtOnly),
+
+    CREATE_LUKE_INSTANCE(9901, RoleType.ADMIN, true),
+    UPDATE_LUKE_INSTANCE(9902, RoleType.ADMIN, true),
+    DELETE_LUKE_INSTANCE(9903, RoleType.ADMIN, true);
 
     private int id;
     private RoleType roleType;

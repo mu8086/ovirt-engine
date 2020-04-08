@@ -408,6 +408,17 @@ CREATE TABLE cluster_policy_units (
 
 
 --
+-- Name: luke_instance; Type TABLE; Schema: public; Owner: engine; Tablespace:
+--
+
+CREATE TABLE luke_instance (
+    luke_instance_id uuid,
+    status character varying(40)
+);
+
+
+
+--
 -- Name: command_assoc_entities; Type: TABLE; Schema: public; Owner: engine; Tablespace:
 --
 

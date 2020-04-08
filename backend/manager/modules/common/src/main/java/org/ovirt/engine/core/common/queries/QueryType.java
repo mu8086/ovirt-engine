@@ -523,6 +523,9 @@ public enum QueryType implements Serializable {
 
     GetSystemOption(QueryAuthType.User),
 
+    GetAllLukeInstances,
+    GetLukeInstanceById,
+
     // Default type instead of having to null check
     Unknown(QueryAuthType.User);
 

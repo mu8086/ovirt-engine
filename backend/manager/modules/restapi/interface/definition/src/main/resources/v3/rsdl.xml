@@ -10690,6 +10690,106 @@ or less indicates that the session should never timeout</description>
                 <type>Icon</type>
             </response>
         </link>
+        <link href="lukeexamples" rel="get">
+            <description>get the list of all lukeexamples in the system</description>
+            <request>
+                <http_method>GET</http_method>
+                <body/>
+            </request>
+            <response>
+                <type>LukeExamples</type>
+            </response>
+        </link>
+        <link href="lukeexamples" rel="add">
+            <description>add a new luke example to the system</description>
+            <request>
+                <http_method>POST</http_method>
+                <headers>
+                    <header required="false">
+                        <name>Correlation-Id</name>
+                        <value>any string</value>
+                    </header>
+                    <header required="true">
+                        <name>Content-Type</name>
+                        <value>application/xml|json</value>
+                    </header>
+                    <header required="false">
+                        <name>Expect</name>
+                        <value>201-created</value>
+                    </header>
+                </headers>
+                <body>
+                    <type>LukeExample</type>
+                    <parameters_set>
+                        <description>add a new luke example to the system</description>
+                        <parameter required="true" type="xs:string">
+                            <name>luke_example.status</name>
+                        </parameter>
+                    </parameters_set>
+                </body>
+            </request>
+            <response>
+                <type>LukeExample</type>
+            </response>
+        </link>
+        <link href="lukeexamples/{lukeexample:id}" rel="delete">
+            <description>delete the luke example from the system</description>
+            <request>
+                <http_method>DELETE</http_method>
+                <headers>
+                    <header required="false">
+                        <name>Correlation-Id</name>
+                        <value>any string</value>
+                    </header>
+                    <header required="true">
+                        <name>Content-Type</name>
+                        <value>application/xml|json</value>
+                    </header>
+                </headers>
+                <body/>
+            </request>
+        </link>
+        <link href="lukeexamples/{lukeexample:id}" rel="get">
+            <description>get the detailed of the specified lukeexample in the system</description>
+            <request>
+                <http_method>GET</http_method>
+                <body/>
+            </request>
+            <response>
+                <type>LukeExample</type>
+            </response>
+        </link>
+        <link href="lukeexamples/{lukeexample:id}" rel="update">
+            <request>
+                <http_method>PUT</http_method>
+                <headers>
+                    <header required="false">
+                        <name>Correlation-Id</name>
+                        <value>any string</value>
+                    </header>
+                    <header required="true">
+                        <name>Content-Type</name>
+                        <value>application/xml|json</value>
+                    </header>
+                    <header required="false">
+                        <name>Expect</name>
+                        <value>202-accepted</value>
+                    </header>
+                </headers>
+                <body>
+                    <type>LukeExample</type>
+                    <parameters_set>
+                        <description>update a new luke example to the system</description>
+                        <parameter required="true" type="xs:string">
+                            <name>luke_example.status</name>
+                        </parameter>
+                    </parameters_set>
+                </body>
+            </request>
+            <response>
+                <type>LukeExample</type>
+            </response>
+        </link>
         <link href="instancetypes" rel="add">
             <description>add a new instance type to the system</description>
             <request>

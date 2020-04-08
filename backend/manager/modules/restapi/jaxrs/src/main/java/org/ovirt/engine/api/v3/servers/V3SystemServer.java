@@ -189,6 +189,11 @@ public class V3SystemServer extends V3Server<SystemResource> {
         return new V3IconsServer(getDelegate().getIconsResource());
     }
 
+    @Path("lukeexamples")
+    public V3LukeExamplesServer getLukeExamplesResource() {
+        return new V3LukeExamplesServer(getDelegate().getLukeExamplesResource());
+    }
+
     @Path("instancetypes")
     public V3InstanceTypesServer getInstanceTypesResource() {
         return new V3InstanceTypesServer(getDelegate().getInstanceTypesResource());
